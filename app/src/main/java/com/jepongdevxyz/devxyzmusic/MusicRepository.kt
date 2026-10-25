@@ -19,10 +19,13 @@ object MusicRepository {
             MediaStore.Audio.Media.ALBUM_ID,
             MediaStore.Audio.Media.DURATION
         )
-        val selection = "${MediaStore.Audio.Media.IS_MUSIC} != 0"
+        // BROAD scan on purpose: NO IS_MUSIC filter. Maraming music file sa
+        // phone ang hindi naka-flag na IS_MUSIC (downloads, recordings, files
+        // na nilipat lang), at yun ang dahilan kaya 0 ang lumalabas kahit may
+        // kanta na. Lahat ng audio sa MediaStore ang kinukuha, TITLE ASC.
         val sortOrder = "${MediaStore.Audio.Media.TITLE} ASC"
         try {
-            context.contentResolver.query(uri, projection, selection, null, sortOrder)?.use { cursor ->
+            context.contentResolver.query(uri, projection, null, null, sortOrder)?.use { cursor ->
                 val idCol = cursor.getColumnIndex(MediaStore.Audio.Media._ID)
                 val titleCol = cursor.getColumnIndex(MediaStore.Audio.Media.TITLE)
                 val artistCol = cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST)

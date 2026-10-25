@@ -35,6 +35,13 @@ Square player screenshot — HINDI ito Spotify o YouTube Music client.
 
 ## Status
 
-- Local source pa lang sa ngayon; HINDI pa naka-push, HINDI pa
-  naka-CI build, at HINDI pa verified ang APK. Ang phone test ni
-  Jepong ang final verdict.
+- v1: CI green, APK delivered 2026-10-26. Phone test ni Jepong:
+  library screen ay generic purple Material (hindi Square) at
+  Songs (0) — tama ang reklamo niya.
+- v2 (ito): library + buong app naka-Square beige/taupe palette na
+  (walang default purple), status-bar overlap ayos, auto-request ng
+  audio permission sa unang bukas, auto-scan pagka-allow at pagbalik
+  sa app, I-scan ulit button, at BROAD MediaStore scan (walang
+  IS_MUSIC filter) para lumabas ang mga kanta kahit hindi naka-flag
+  na music. Player: walang video/streaming button, local lang pa rin.
+- Ang phone test ni Jepong ang final verdict.
