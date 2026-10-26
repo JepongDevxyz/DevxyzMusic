@@ -56,4 +56,10 @@ Square player screenshot — HINDI ito Spotify o YouTube Music client.
   78px=52dp + icon 36px=24dp, bottom pill nasa baba (weight spacer)
   + bottom margin 36px=24dp. Walang Square code na kinopya —
   sukat at kulay lang mula sa screenshot ang ginamit.
+- v5 (ito): v4 build FAILED sa CI (exit 1) — root cause: ang v4 ay
+  gumamit ng `.aspectRatio(1f)` nang walang
+  `import androidx.compose.foundation.layout.aspectRatio` (ang file
+  ay individual imports, hindi wildcard), kaya unresolved reference
+  sa Kotlin compile. Inayos dito: idinagdag ang import. Ang `weight`
+  ay hindi kailangan ng import — ColumnScope member ito.
 - Ang phone test ni Jepong ang final verdict.
