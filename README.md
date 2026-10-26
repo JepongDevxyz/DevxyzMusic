@@ -44,4 +44,9 @@ Square player screenshot — HINDI ito Spotify o YouTube Music client.
   sa app, I-scan ulit button, at BROAD MediaStore scan (walang
   IS_MUSIC filter) para lumabas ang mga kanta kahit hindi naka-flag
   na music. Player: walang video/streaming button, local lang pa rin.
+- v3 (ito): player palette sinukat mismo sa player-2.png (540x1136):
+  background #E4D7C7 -> #C7BEB0 -> #A9A49A, title pill at pause
+  #948875, translucent circles #7F7566, top circles 44dp, prev/next
+  56dp, pause 80dp, bottom pill first icon 40dp. Walang video/
+  streaming button pa rin (local-only, ayon sa unang order niya).
 - Ang phone test ni Jepong ang final verdict.

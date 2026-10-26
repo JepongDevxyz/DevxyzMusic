@@ -107,7 +107,7 @@ fun AlbumArt(song: Song?, modifier: Modifier = Modifier) {
             Icon(
                 imageVector = Icons.Filled.MusicNote,
                 contentDescription = null,
-                tint = Color(0xFF8A7D6B),
+                tint = Color(0xFF948875),
                 modifier = Modifier.size(72.dp)
             )
         }
@@ -138,7 +138,7 @@ fun PlayerScreen(
     if (song == null) {
         Box(
             contentAlignment = Alignment.Center,
-            modifier = Modifier.fillMaxSize().background(Color(0xFFF2E6CF))
+            modifier = Modifier.fillMaxSize().background(Color(0xFFE4D7C7))
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("Walang kantang naka-play", fontSize = 18.sp)
@@ -158,9 +158,9 @@ fun PlayerScreen(
             .background(
                 Brush.verticalGradient(
                     listOf(
-                        Color(0xFFF2E6CF),
-                        Color(0xFFD8C9B0),
-                        Color(0xFFA89A86)
+                        Color(0xFFE4D7C7),
+                        Color(0xFFC7BEB0),
+                        Color(0xFFA9A49A)
                     )
                 )
             )
@@ -178,8 +178,8 @@ fun PlayerScreen(
                 IconButton(
                     onClick = onClose,
                     modifier = Modifier
-                        .size(48.dp)
-                        .background(Color(0x806B5D4F), CircleShape)
+                        .size(44.dp)
+                        .background(Color(0x807F7566), CircleShape)
                 ) {
                     Icon(
                         imageVector = Icons.Filled.KeyboardArrowDown,
@@ -200,8 +200,8 @@ fun PlayerScreen(
                 IconButton(
                     onClick = { showQueue = true },
                     modifier = Modifier
-                        .size(48.dp)
-                        .background(Color(0x806B5D4F), CircleShape)
+                        .size(44.dp)
+                        .background(Color(0x807F7566), CircleShape)
                 ) {
                     Icon(
                         imageVector = Icons.Filled.QueueMusic,
@@ -228,7 +228,7 @@ fun PlayerScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(32.dp))
-                        .background(Color(0xFF8A7D6B))
+                        .background(Color(0xFF948875))
                         .padding(horizontal = 16.dp, vertical = 10.dp)
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
@@ -354,40 +354,40 @@ fun PlayerScreen(
                     IconButton(
                         onClick = { MusicController.previous(context) },
                         modifier = Modifier
-                            .size(64.dp)
-                            .background(Color(0x806B5D4F), CircleShape)
+                            .size(56.dp)
+                            .background(Color(0x807F7566), CircleShape)
                     ) {
                         Icon(
                             imageVector = Icons.Filled.SkipPrevious,
                             contentDescription = "Nakaraang kanta",
                             tint = Color.White,
-                            modifier = Modifier.size(32.dp)
+                            modifier = Modifier.size(28.dp)
                         )
                     }
                     IconButton(
                         onClick = { MusicController.toggle(context) },
                         modifier = Modifier
-                            .size(88.dp)
-                            .background(Color(0xFF8A7D6B), CircleShape)
+                            .size(80.dp)
+                            .background(Color(0xFF948875), CircleShape)
                     ) {
                         Icon(
                             imageVector = if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                             contentDescription = if (isPlaying) "Pause" else "Play",
                             tint = Color.White,
-                            modifier = Modifier.size(44.dp)
+                            modifier = Modifier.size(36.dp)
                         )
                     }
                     IconButton(
                         onClick = { MusicController.next(context) },
                         modifier = Modifier
-                            .size(64.dp)
-                            .background(Color(0x806B5D4F), CircleShape)
+                            .size(56.dp)
+                            .background(Color(0x807F7566), CircleShape)
                     ) {
                         Icon(
                             imageVector = Icons.Filled.SkipNext,
                             contentDescription = "Susunod na kanta",
                             tint = Color.White,
-                            modifier = Modifier.size(32.dp)
+                            modifier = Modifier.size(28.dp)
                         )
                     }
                     IconButton(onClick = { MusicController.cycleRepeat(context) }) {
@@ -412,15 +412,15 @@ fun PlayerScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(32.dp))
-                        .border(1.dp, Color(0xFF6B5D4F), RoundedCornerShape(32.dp))
-                        .background(Color(0x336B5D4F))
+                        .border(1.dp, Color(0xFF7F7566), RoundedCornerShape(32.dp))
+                        .background(Color(0x337F7566))
                         .padding(8.dp)
                 ) {
                     IconButton(
                         onClick = onClose,
                         modifier = Modifier
-                            .size(48.dp)
-                            .background(Color(0xFF6B5D4F), CircleShape)
+                            .size(40.dp)
+                            .background(Color(0xFF7F7566), CircleShape)
                     ) {
                         Icon(
                             imageVector = Icons.Filled.Album,
