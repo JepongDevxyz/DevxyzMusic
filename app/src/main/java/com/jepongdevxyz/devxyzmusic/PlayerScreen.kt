@@ -173,12 +173,12 @@ fun PlayerScreen(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 12.dp)
+                    .padding(horizontal = 16.dp, vertical = 6.dp)
             ) {
                 IconButton(
                     onClick = onClose,
                     modifier = Modifier
-                        .size(44.dp)
+                        .size(37.dp)
                         .background(Color(0x807F7566), CircleShape)
                 ) {
                     Icon(
@@ -200,7 +200,7 @@ fun PlayerScreen(
                 IconButton(
                     onClick = { showQueue = true },
                     modifier = Modifier
-                        .size(44.dp)
+                        .size(37.dp)
                         .background(Color(0x807F7566), CircleShape)
                 ) {
                     Icon(
@@ -216,17 +216,18 @@ fun PlayerScreen(
                 song = song,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f)
+                    .aspectRatio(1f)
             )
 
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-                Spacer(modifier = Modifier.height(16.dp))
+            Column(modifier = Modifier.weight(1f).padding(horizontal = 16.dp)) {
+                Spacer(modifier = Modifier.height(8.dp))
 
                 // Title pill: title + artist + share / queue / heart.
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .fillMaxWidth()
+                        .padding(horizontal = 16.dp)
                         .clip(RoundedCornerShape(32.dp))
                         .background(Color(0xFF948875))
                         .padding(horizontal = 16.dp, vertical = 10.dp)
@@ -354,40 +355,40 @@ fun PlayerScreen(
                     IconButton(
                         onClick = { MusicController.previous(context) },
                         modifier = Modifier
-                            .size(56.dp)
+                            .size(37.dp)
                             .background(Color(0x807F7566), CircleShape)
                     ) {
                         Icon(
                             imageVector = Icons.Filled.SkipPrevious,
                             contentDescription = "Nakaraang kanta",
                             tint = Color.White,
-                            modifier = Modifier.size(28.dp)
+                            modifier = Modifier.size(20.dp)
                         )
                     }
                     IconButton(
                         onClick = { MusicController.toggle(context) },
                         modifier = Modifier
-                            .size(80.dp)
+                            .size(52.dp)
                             .background(Color(0xFF948875), CircleShape)
                     ) {
                         Icon(
                             imageVector = if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                             contentDescription = if (isPlaying) "Pause" else "Play",
                             tint = Color.White,
-                            modifier = Modifier.size(36.dp)
+                            modifier = Modifier.size(24.dp)
                         )
                     }
                     IconButton(
                         onClick = { MusicController.next(context) },
                         modifier = Modifier
-                            .size(56.dp)
+                            .size(37.dp)
                             .background(Color(0x807F7566), CircleShape)
                     ) {
                         Icon(
                             imageVector = Icons.Filled.SkipNext,
                             contentDescription = "Susunod na kanta",
                             tint = Color.White,
-                            modifier = Modifier.size(28.dp)
+                            modifier = Modifier.size(20.dp)
                         )
                     }
                     IconButton(onClick = { MusicController.cycleRepeat(context) }) {
@@ -403,7 +404,7 @@ fun PlayerScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.weight(1f))
 
                 // Bottom pill: library, queue, speed, info — lahat may tunay na handler.
                 Row(
@@ -450,7 +451,7 @@ fun PlayerScreen(
                         )
                     }
                 }
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
             }
         }
     }

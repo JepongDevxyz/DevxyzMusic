@@ -49,4 +49,11 @@ Square player screenshot — HINDI ito Spotify o YouTube Music client.
   #948875, translucent circles #7F7566, top circles 44dp, prev/next
   56dp, pause 80dp, bottom pill first icon 40dp. Walang video/
   streaming button pa rin (local-only, ayon sa unang order niya).
+- v4 (ito, frame by frame sa player-2.png 540x1136, /1.5 = dp):
+  top circles 56px=37dp, top bar 75px=50dp, art square 540x540
+  (aspectRatio 1f, hindi stretched), title pill margins 49px=32dp,
+  prev/next circles 56px=37dp + icons 30px=20dp, pause circle
+  78px=52dp + icon 36px=24dp, bottom pill nasa baba (weight spacer)
+  + bottom margin 36px=24dp. Walang Square code na kinopya —
+  sukat at kulay lang mula sa screenshot ang ginamit.
 - Ang phone test ni Jepong ang final verdict.
